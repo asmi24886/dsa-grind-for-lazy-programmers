@@ -60,8 +60,9 @@ Welcome to **The Lazy Programmer's Guide to DSA Grind**! 🎯 A collection of th
 | 🔗 Resource Name | 📝 Note |
 |-----------------|---------|
 | 📌 [GitHub - The CS Cheatsheet](https://github.com/jwasham/coding-interview-university) | One of the most starred repositories for coding interviews. |
-| 🚀 [GitHub Gist - Leetcode Cheatsheet](https://gist.github.com/krishnadey30/d1b4b36b8751d48533b73c0d666819e2) | A comprehensive collection of commonly asked Leetcode questions. |
-| 📚 [Reddit - Leetcode Study Plan](https://www.reddit.com/r/learnprogramming/comments/fekrdt/leetcode_study_plan/) | A community-driven roadmap for tackling DSA questions. |
+| 🚀 [Company wise cheatsheet](https://github.com/krishnadey30/LeetCode-Questions-CompanyWise) | A comprehensive collection of commonly asked Leetcode questions, grouped by companies. |
+
+...more to follow!
 
 ---
 
