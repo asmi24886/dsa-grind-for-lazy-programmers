@@ -49,7 +49,9 @@ Welcome to **The Lazy Programmer's Guide to DSA Grind**! 🎯 A collection of th
 | 🗺 [AlgoMap](https://algomap.io/list) | Even more problems. Lol. |
 | 🎓 [AlgoExpert](https://www.algoexpert.io/questions) | Paid. But worth the purchase. |
 
-...To be updated!
+...more to follow!
+
+
 ---
 
 ## 📌 Community Curated Sheets & Repositories
