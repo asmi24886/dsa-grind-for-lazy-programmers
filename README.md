@@ -36,13 +36,20 @@ Welcome to **The Lazy Programmer's Guide to DSA Grind**! 🎯 A collection of th
 | 📝 [AlgoMonster](https://algo.monster/) | One of my most favourite DSA practice sites after Neetcode. They have a cool visualization and insights on topic-wise ROI, flowcharts for identifying patterns, etc. Do have a look. |
 | 🎯 [Educative 99](https://www.educative.io/path/educative-99-in-python-accelerate-your-coding-interview-prep) | A curated list of 99 problems for beginners, grouped by patterns, that interviewees frequently come by in technical interviews. |
 | 🤖 [Educative's Most Popular DSA Practice Set](https://www.educative.io/courses/grokking-coding-interview-in-python) | Grokking the coding interview needs no introduction. Explore an in-depth analysis of coding patterns to ace your technical interview. |
-| 🏆 [Work@Tech](https://workat.tech/problem-solving/practice/topics) | |
+| 🏆 [Work@Tech](https://workat.tech/problem-solving/practice/topics) | Good mix of problems for software engineers preparing for top tech interviews. |
 | 📚 [Back To Back SWE](https://backtobackswe.com/platform/content) | Has a fantastic DSA explanation channel on YouTube. More cool practice problems. |
 | 📌 [Striver's DSA Sheet](https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/) | Indian engineer/tech YouTuber. Has a nice set of curated problems. Some are pretty difficult. Try out if you dare! |
 | 🚀 [InterviewBit's DSA Course](https://www.interviewbit.com/courses/programming/) | Parent company of Scaler. A very good and well-balanced set of problems. Set up in a topic tree format so that your preparation is well structured. |
-| 📚 [ApnaCollege Cheatsheet](https://docs.google.com/spreadsheets/d/1hXserPuxVoWMG9Hs7y8wVdRCJTcj3xMBAEYUOXQ5Xag/edit?gid=0#gid=0) | |
+| 📚 [ApnaCollege Cheatsheet](https://docs.google.com/spreadsheets/d/1hXserPuxVoWMG9Hs7y8wVdRCJTcj3xMBAEYUOXQ5Xag/edit?gid=0#gid=0) | Quick reference guide from Apna College. |
 | 🎯 [Arsh Goyal's Cheatsheet](https://docs.google.com/spreadsheets/d/1MGVBJ8HkRbCnU6EQASjJKCqQE8BWng4qgL0n3vCVOxE/edit?gid=0#gid=0) | Tech YouTuber. More problems. Better prep. |
+| 📈 [Sean Prashad's Sheet](https://seanprashad.com/leetcode-patterns/) | Popular among the Indian Leetcode community. Has nice filters on difficulty, topics, and companies. |
+| 📅 [Kohei Arai's Top 60](https://medium.com/@koheiarai94/60-leetcode-questions-to-prepare-for-coding-interview-8abbb6af589e) | FAANG engineer's original cheatsheet that helped him land FAANG. |
+| 🌊 [PirateKing's Sheet](https://www.piratekingdom.com/leetcode/cheat-sheet) | Cool tech bro. Even cooler problem sets. |
+| 🚀 [AlgoPrep](https://docs.google.com/spreadsheets/d/1kyHfGGaLTzWspcqMUUS5Httmip7t8LJB0P-uPrRLGos/edit?gid=0#gid=0) | Yet another tech YouTuber with his own cheatsheet. |
+| 🗺 [AlgoMap](https://algomap.io/list) | Even more problems. Lol. |
+| 🎓 [AlgoExpert](https://www.algoexpert.io/questions) | Paid. But worth the purchase. |
 
+...To be updated!
 ---
 
 ## 📌 Community Curated Sheets & Repositories
