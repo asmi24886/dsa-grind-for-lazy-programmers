@@ -1,12 +1,10 @@
 # 🚀 The Lazy Programmer's Guide to DSA Grind
 
-Welcome to **The Lazy Programmer's Guide to DSA Grind**!
-
----
-
 ![Bean Image](https://raw.githubusercontent.com/asmi24886/dsa-grind-for-lazy-programmers/refs/heads/main/bean.png)
 
 ---
+
+Welcome to **The Lazy Programmer's Guide to DSA Grind**!
 
 🎯 A collection of the best DSA cheatsheets to help you **grind smarter, not harder**! 💡 Whether you're preparing for coding interviews, competitive programming, or just leveling up your skills, this repo has got you covered with quick-reference resources. 
 
