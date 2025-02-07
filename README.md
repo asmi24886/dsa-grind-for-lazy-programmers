@@ -3,6 +3,7 @@
 Welcome to **The Lazy Programmer's Guide to DSA Grind**! 🎯 A collection of the best DSA cheatsheets to help you **grind smarter, not harder**! 💡 Whether you're preparing for coding interviews, competitive programming, or just leveling up your skills, this repo has got you covered with quick-reference resources. 
 
 🔥 **Why use this?**
+
 ✅ Handpicked, high-quality cheatsheets  
 ✅ Covers essential DSA topics in one place  
 ✅ Perfect for lazy (but smart) programmers  
