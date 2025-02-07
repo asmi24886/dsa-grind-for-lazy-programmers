@@ -22,15 +22,15 @@ Welcome to **The Lazy Programmer's Guide to DSA Grind**!
 
 | 🔗 Resource Name | 📝 Note |
 |-----------------|---------|
-| 📌 [Blind 75](https://neetcode.io/practice?tab=blind75) | Best for absolute beginners |
-| 🚀 [Grind 75](https://www.techinterviewhandbook.org/grind75/) | A leap further to practice/revise similar problems to that of Blind 75, but focused more on modern tech interviews |
-| 📚 [Neetcode 150](https://neetcode.io/practice?tab=neetcode150) | A wider set of problems. Covers Blind 75 |
-| 📝 [Neetcode 250](https://neetcode.io/practice?tab=neetcode250) | More problems if you have around 3 to 4 months of interview prep time |
+| 📌 [Blind 75](https://neetcode.io/practice?tab=blind75) | Best for absolute beginners! |
+| 🚀 [Grind 75](https://www.techinterviewhandbook.org/grind75/) | A leap further to practice/revise similar problems to that of Blind 75, but focused more on modern tech interviews. |
+| 📚 [Neetcode 150](https://neetcode.io/practice?tab=neetcode150) | A wider set of problems. Covers Blind 75. |
+| 📝 [Neetcode 250](https://neetcode.io/practice?tab=neetcode250) | More problems if you have around 3 to 4 months of interview prep time. |
 | 🎯 [Grind 169](https://www.techinterviewhandbook.org/grind75/?weeks=26&hours=40) | Same as Neetcode 150. Overlapping problems. Great for a 2nd practice set. |
 | 🤖 [Neetcode All](https://neetcode.io/practice?tab=allNC) | You have 6 to 8 months of solid prep time. You are already at an intermediate level of problem solving. Just go for it. |
 | 🏆 [AlgoMaster 300](https://algomaster.io/practice/dsa-patterns) | Ashish Pratap Singh's curated list of 300 problems. Best part? Deep drill down approach to pattern-based problem solving. A must in your arsenal. |
 | 📚 [Leetcode 75](https://leetcode.com/studyplan/leetcode-75/) | More problems for absolute beginners |
-| 📌 [Leetcode 150](https://leetcode.com/studyplan/top-interview-150/) | Most asked interview questions. Got an interview in 1 month and don't know where to start? This is your list to go guns blazing! |
+| 📌 [Leetcode 150](https://leetcode.com/studyplan/top-interview-150/) | Most asked interview questions. Got an interview in 1 month and don't know where to start? This is your list to go in, guns blazing! |
 
 ---
 
@@ -61,7 +61,7 @@ Welcome to **The Lazy Programmer's Guide to DSA Grind**!
 
 ---
 
-## 📌 Community Curated Sheets & Repositories
+## 📌 Other Community Curated Sheets & Repositories
 
 | 🔗 Resource Name | 📝 Note |
 |-----------------|---------|
