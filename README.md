@@ -15,16 +15,16 @@ Welcome to **The Lazy Programmer's Guide to DSA Grind**! 🎯 A collection of th
 
 📌 **Here are some of the most comprehensive DSA cheatsheets to accelerate your learning:**
 
-| 🔗 Resource Name | 📄 Link |
-|-----------------|---------|
-| 📌 Striver's DSA Cheatsheet | [🔗 Click Here](https://takeuforward.org/strivers-a2z-dsa-course/) |
-| 🚀 Neetcode DSA Cheatsheet | [🔗 Click Here](https://neetcode.io/) |
-| 📖 Fraz’s DSA Sheet | [🔗 Click Here](https://github.com/FrazBh/DSA_Sheet) |
-| 📜 Love Babbar DSA Sheet | [🔗 Click Here](https://drive.google.com/file/d/1QwV6EbeZadR4WrYzwgVYXiG9K1l7J7Dg/view) |
-| 🎯 Leetcode Patterns | [🔗 Click Here](https://seanprashad.com/leetcode-patterns/) |
-| 🤖 AlgoMonster Cheatsheet | [🔗 Click Here](https://www.algomonster.com/) |
-| 📘 Tech Interview Handbook | [🔗 Click Here](https://www.techinterviewhandbook.org/grind75) |
-| 🏆 GeeksforGeeks DSA Sheet | [🔗 Click Here](https://www.geeksforgeeks.org/dsa-sheet-by-gfg/) |
+| 🔗 Resource Name |
+|-----------------|
+| 📌 [Striver's DSA Cheatsheet](https://takeuforward.org/strivers-a2z-dsa-course/) |
+| 🚀 [Neetcode DSA Cheatsheet](https://neetcode.io/) |
+| 📖 [Fraz’s DSA Sheet](https://github.com/FrazBh/DSA_Sheet) |
+| 📜 [Love Babbar DSA Sheet](https://drive.google.com/file/d/1QwV6EbeZadR4WrYzwgVYXiG9K1l7J7Dg/view) |
+| 🎯 [Leetcode Patterns](https://seanprashad.com/leetcode-patterns/) |
+| 🤖 [AlgoMonster Cheatsheet](https://www.algomonster.com/) |
+| 📘 [Tech Interview Handbook](https://www.techinterviewhandbook.org/grind75) |
+| 🏆 [GeeksforGeeks DSA Sheet](https://www.geeksforgeeks.org/dsa-sheet-by-gfg/) |
 
 ---
 
