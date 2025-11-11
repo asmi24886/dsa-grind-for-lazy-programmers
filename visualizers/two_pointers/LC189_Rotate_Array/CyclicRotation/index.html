@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Rotation - Pass the Ball</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 2em;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+
+        .hand-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+            min-height: 100px;
+        }
+
+        .hand {
+            font-size: 60px;
+            margin-right: 20px;
+        }
+
+        .ball-in-hand {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #ffd89b 0%, #ff6b6b 100%);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.6);
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .empty-hand {
+            color: #ccc;
+            font-size: 24px;
+            font-style: italic;
+        }
+
+        .array-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+            position: relative;
+        }
+
+        .array-item {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+            position: relative;
+            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .array-item.current {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            transform: scale(1.15);
+            box-shadow: 0 8px 25px rgba(245, 87, 108, 0.6);
+        }
+
+        .array-item.next {
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+            transform: scale(1.15);
+            box-shadow: 0 8px 25px rgba(67, 233, 123, 0.6);
+        }
+
+        .array-item .index {
+            font-size: 11px;
+            position: absolute;
+            bottom: -25px;
+            color: #666;
+            font-weight: normal;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        button:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        button:active:not(:disabled) {
+            transform: translateY(0);
+        }
+
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .prev-btn {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+        }
+
+        .next-btn {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+        }
+
+        .reset-btn {
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+            color: white;
+        }
+
+        .info-box {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            border-left: 4px solid #667eea;
+        }
+
+        .info-box h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .info-box p {
+            color: #666;
+            line-height: 1.6;
+            margin: 5px 0;
+        }
+
+        .status {
+            text-align: center;
+            font-size: 18px;
+            color: #667eea;
+            font-weight: bold;
+            min-height: 60px;
+            margin: 20px 0;
+        }
+
+        .final-result {
+            background: #e7f3ff;
+            border: 2px solid #4facfe;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .final-result h4 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .array-display {
+            font-size: 20px;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .cycle-info {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px 0;
+            text-align: center;
+            font-weight: bold;
+            color: #856404;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔄 Rotate Array (k=3)</h1>
+        <p class="subtitle">Cyclic Replacement: [1,2,3,4,5,6,7] → [5,6,7,1,2,3,4]</p>
+
+        <div class="hand-container" id="handContainer">
+            <div class="hand">✋</div>
+            <div class="empty-hand">Empty hand</div>
+        </div>
+
+        <div class="status" id="status">Click "Next Step" to start rotation</div>
+        
+        <div id="cycleInfo"></div>
+        
+        <div class="array-container" id="arrayContainer"></div>
+
+        <div class="controls">
+            <button class="prev-btn" id="prevBtn">⬅ Previous Step</button>
+            <button class="reset-btn" id="resetBtn">🔄 Reset</button>
+            <button class="next-btn" id="nextBtn">Next Step ➡</button>
+        </div>
+
+        <div id="finalResult"></div>
+
+        <div class="info-box">
+            <h3>📖 Algorithm: Cyclic Replacement</h3>
+            <p><strong>Concept:</strong> Start at index 0, pick up the value (ball), place it at (i+k)%n, pick up what was there, repeat.</p>
+            <p><strong>Key:</strong> With n=7 and k=3, gcd(7,3)=1, so we need only 1 cycle.</p>
+            <p><strong>Path:</strong> 0→3→6→2→5→1→4→0 (7 moves total, back to start)</p>
+            <p><strong>Result:</strong> Each element moves exactly k=3 positions to the right (with wrap-around).</p>
+        </div>
+    </div>
+
+    <script>
+        const ARRAY_SIZE = 7;
+        const K = 3;
+        const originalArray = [1, 2, 3, 4, 5, 6, 7];
+        
+        // State tracking
+        let history = [];
+        let currentStep = 0;
+
+        function gcd(a, b) {
+            return b === 0 ? a : gcd(b, a % b);
+        }
+
+        function generateSteps() {
+            const steps = [];
+            const arr = [...originalArray];
+            const n = arr.length;
+            const cycles = gcd(n, K);
+            
+            // Initial state
+            steps.push({
+                array: [...arr],
+                ball: null,
+                currentIndex: -1,
+                nextIndex: -1,
+                cycleNum: 0,
+                cycleStart: 0,
+                message: "Ready to start! Click Next Step.",
+                completed: false
+            });
+
+            let moveCount = 0;
+            
+            for (let cycleStart = 0; cycleStart < cycles; cycleStart++) {
+                let currentIndex = cycleStart;
+                let ball = arr[currentIndex];
+                let visited = 0;
+                
+                // Pick up first ball
+                steps.push({
+                    array: [...arr],
+                    ball: ball,
+                    currentIndex: currentIndex,
+                    nextIndex: -1,
+                    cycleNum: cycleStart + 1,
+                    cycleStart: cycleStart,
+                    message: `Cycle ${cycleStart + 1}: Pick up ball at index ${currentIndex} (value = ${ball})`,
+                    completed: false
+                });
+
+                do {
+                    const nextIndex = (currentIndex + K) % n;
+                    const temp = arr[nextIndex];
+                    arr[nextIndex] = ball;
+                    moveCount++;
+                    
+                    steps.push({
+                        array: [...arr],
+                        ball: temp,
+                        currentIndex: nextIndex,
+                        nextIndex: (nextIndex + K) % n,
+                        cycleNum: cycleStart + 1,
+                        cycleStart: cycleStart,
+                        message: `Place ${ball} at index ${nextIndex}, pick up ${temp}. Next destination: ${(nextIndex + K) % n}`,
+                        completed: false
+                    });
+                    
+                    ball = temp;
+                    currentIndex = nextIndex;
+                    visited++;
+                } while (currentIndex !== cycleStart);
+            }
+
+            // Mark final step as completed
+            steps[steps.length - 1].completed = true;
+            steps[steps.length - 1].message = "✅ Rotation Complete! All elements moved to their final positions.";
+            steps[steps.length - 1].ball = null;
+            steps[steps.length - 1].currentIndex = -1;
+            steps[steps.length - 1].nextIndex = -1;
+
+            return steps;
+        }
+
+        function initializeVisualization() {
+            history = generateSteps();
+            currentStep = 0;
+            updateDisplay();
+        }
+
+        function updateDisplay() {
+            const state = history[currentStep];
+            
+            // Update array
+            const container = document.getElementById('arrayContainer');
+            container.innerHTML = '';
+            
+            state.array.forEach((value, index) => {
+                const item = document.createElement('div');
+                item.className = 'array-item';
+                
+                if (state.currentIndex === index) {
+                    item.classList.add('current');
+                }
+                
+                if (state.nextIndex === index) {
+                    item.classList.add('next');
+                }
+                
+                item.innerHTML = `
+                    ${value}
+                    <span class="index">i=${index}</span>
+                `;
+                container.appendChild(item);
+            });
+
+            // Update hand
+            const handContainer = document.getElementById('handContainer');
+            if (state.ball !== null) {
+                handContainer.innerHTML = `
+                    <div class="hand">✋</div>
+                    <div class="ball-in-hand">${state.ball}</div>
+                `;
+            } else {
+                handContainer.innerHTML = `
+                    <div class="hand">✋</div>
+                    <div class="empty-hand">Empty hand</div>
+                `;
+            }
+
+            // Update status
+            document.getElementById('status').innerHTML = state.message;
+
+            // Update cycle info
+            if (state.cycleNum > 0 && !state.completed) {
+                document.getElementById('cycleInfo').innerHTML = `
+                    <div class="cycle-info">
+                        Cycle ${state.cycleNum} of ${gcd(ARRAY_SIZE, K)} | Starting from index ${state.cycleStart}
+                    </div>
+                `;
+            } else {
+                document.getElementById('cycleInfo').innerHTML = '';
+            }
+
+            // Update final result
+            if (state.completed) {
+                document.getElementById('finalResult').innerHTML = `
+                    <div class="final-result">
+                        <h4>Final Result:</h4>
+                        <div class="array-display">Original: [${originalArray.join(', ')}]</div>
+                        <div class="array-display">Rotated: [${state.array.join(', ')}]</div>
+                    </div>
+                `;
+            } else {
+                document.getElementById('finalResult').innerHTML = '';
+            }
+
+            // Update buttons
+            document.getElementById('prevBtn').disabled = currentStep === 0;
+            document.getElementById('nextBtn').disabled = currentStep === history.length - 1;
+        }
+
+        function nextStep() {
+            if (currentStep < history.length - 1) {
+                currentStep++;
+                updateDisplay();
+            }
+        }
+
+        function prevStep() {
+            if (currentStep > 0) {
+                currentStep--;
+                updateDisplay();
+            }
+        }
+
+        function reset() {
+            currentStep = 0;
+            updateDisplay();
+        }
+
+        document.getElementById('nextBtn').addEventListener('click', nextStep);
+        document.getElementById('prevBtn').addEventListener('click', prevStep);
+        document.getElementById('resetBtn').addEventListener('click', reset);
+
+        // Initialize on load
+        initializeVisualization();
+    </script>
+</body>
+</html>
